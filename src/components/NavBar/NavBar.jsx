@@ -1,23 +1,28 @@
 import React from 'react';
 import CartWidget from '../CartWidget/CartWidget';
+import clotheslogo from '../../assets/clotheslogo.jpg'
+import '../NavBar/navbarstyles.css';
 
-function NavBar(){
+function NavBar() {
     return (
-      <nav>
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Productos</a>
-                </li>
-                <li>
-                    <a href="">Contacto</a>
-                </li>
-            </ul>
-            <CartWidget />
-      </nav>
-    )
-  }
+        <nav className='navbar'>
 
-  export default NavBar
+            <ul className='navbarNav'>
+                <img className='clothesLogo' src={clotheslogo} alt="logo del ecommerce de venta de ropa" />
+                <li className='navItem'>
+                    <a className='navLink' href="">Home</a>
+                </li>
+                <li className='navItem'>
+                    <a className='navLink' href="">Productos</a>
+                </li>
+                <li className='navItem'>
+                    <a className='navLink' href="">Contacto</a>
+                </li>
+                <CartWidget />
+            </ul>
+
+        </nav>
+    )
+}
+
+export default NavBar
