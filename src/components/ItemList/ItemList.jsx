@@ -1,10 +1,11 @@
 import React from "react";
+import '../ItemList/itemliststyles.css';
 
 function ItemList(props) {
     return (
-        <li >
-            <p>{props.producto}</p>
-            <p>{props.precio}</p>
+        <li className="productCard">
+            <h2>{props.producto}</h2>
+            <p>${props.precio}</p>
         </li >
     )
 }
